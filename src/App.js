@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import Login from './components/Login';
+import Register from './components/Register';
+import UsersList from './components/UsersList';
+
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>MERN Stack Project</h1>
+      <div className='row w-100 pl-4'>
+        <div className='col-md-6 justify-content-center'>
+          <Register />
+        </div>
+        <div className='col-md-6 justify-content-center'>
+          <Login />
+        </div>
+      </div>
+      <div className='row justify-content-center w-100'>
+        <div className='col-md-8'>
+          <UsersList />
+        </div>
+      </div>
     </div>
   );
 }
